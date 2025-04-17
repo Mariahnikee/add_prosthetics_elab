@@ -274,11 +274,19 @@ input[type="text"] {
   justify-content: space-between;
   gap: 10px;
 }
+
+#field-margin-top{
+  margin-top: 20px;
+}
+#field-margin-bottom{
+ margin-bottom: 20px;
+}
 .measurement-field {
   display: flex;
   align-items: center;
   margin-bottom: 2px;
 }
+
 .measurement-field label {
   flex: 1;
   font-size: 12px;
