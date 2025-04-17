@@ -1,0 +1,318 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  margin: 0;
+  
+  background-color: #f5f5f5;
+}
+main{background-color: #fff;
+  padding: 0px 100px;
+}
+.header {
+  display: flex;
+  justify-content:flex-end ;
+  padding: none;
+  color: #888;
+}
+.fade-in{color:#C4C4C4;
+  
+}
+  
+.header span {
+  color: #858181;
+}
+.patient-details {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  border: 1px solid #858181;
+  border-radius: 4px;
+  box-shadow: 0px 0px 9.1px 0px rgba(0, 0, 0, 0.25);
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #fff;    
+}
+
+.patient-details-sec {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  border-right: 0.5px solid #C4C4C4;
+  padding: 5px 15px;
+  align-items: flex-start;
+}
+
+.patient-details-sec:last-child {
+  border-right: none;
+}
+
+.patient-details-sec:nth-child(1) {
+  flex: 2; 
+}
+
+.patient-details-sec:nth-child(2) {
+  flex: 2;
+}
+
+.patient-details-sec:nth-child(3) {
+  flex: 1; 
+}
+
+#info-label {
+  flex: 1;
+}
+
+#info-value {
+  flex: 1;
+}
+
+#info-label p {
+  color:#333 ;
+  margin: 8px 0;
+  text-align: left;
+}
+
+#info-value p {
+  color: #858181; 
+  margin: 8px 0;
+  text-align: right;
+}
+
+.info-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.info-col {
+  flex: 1;
+  padding: 5px;
+}
+
+.patient-name {
+  color: #333;
+  font-weight: bold;
+}
+.marital-status{
+  display: flex;
+  gap:5px
+}
+
+.action-buttons {
+  margin-bottom: 20px;
+}
+.btn {
+  padding: 5px 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 5px;
+  font-size: 12px;
+}
+.btn-red {
+  background-color: #AA2F2F;
+}
+.btn-none {
+  background-color: #fff;
+  color:#AA2F2F ;
+  border:1px solid  #AA2F2F;
+}
+.amputation-section {
+  margin-bottom: 20px;
+}
+.section-title {
+  color: #858181;
+  margin-bottom: 5px;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  width: 60%;
+}
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+.checkbox-item {
+  display: flex;
+  align-items: center;
+}
+.checkbox-item label {
+  margin-left: 5px;
+  color: #666;
+  font-size: 14px;
+}
+.fitting-section {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.fitting-label {
+  color: #888;
+  font-size: 14px;
+  display: flex;
+  align-items: center; 
+}
+
+.fitting-options {
+  display: flex;
+  gap: 15px;
+  align-items: center; 
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center; 
+  min-width: 100px; 
+}
+
+input[type="checkbox"] {
+  margin-right: 5px; 
+}
+.measurement-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  margin-bottom: 20px;
+}
+.measurement-item {
+  width: 16.6666%;
+  margin-bottom: 10px;
+}
+.measurement-label {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+input[type="text"] {
+  width: 100%;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.25);
+  border: 1px solid #FFFBFB;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+.subpage{
+  padding: 0px 100px;
+}
+.observation-section {
+  margin-bottom: 20px;
+  position: relative;
+}
+#observationSelect{color: #888;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.25);
+  border: 1px solid #FFFBFB;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+.select-container {
+  position: relative;
+  width: 120px;
+  margin-right: 2px;
+}
+.select-box {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #fff;
+}
+.select-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  z-index: 10;
+  display: none;
+}
+.select-option {
+  padding: 5px;
+  cursor: pointer;
+}
+.select-option:hover {
+  background-color: #f0f0f0;
+}
+.observation-controls {
+  display: flex;
+  margin-bottom: 15px;
+}
+.btn-add {
+  background-color: #AA2F2F;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.observation-images {
+  display: flex;
+  gap: 150px;
+ 
+}
+.observation-image {
+  padding:0;
+  display: none;
+}
+.observation-image.active {
+  display: block;
+}
+.knee-img{
+  height:400px ;
+}
+.measurement-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.measurement-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+.measurement-field label {
+  flex: 1;
+  font-size: 12px;
+  color: #666;
+}
+.measurement-field input {
+  width: 100px;
+}
+.measurement-diagram {
+  text-align: center;
+}
+.recommendation-section {
+  margin-top: 20px;
+}
+.recommendation-label {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.observation-inp {
+  width: 30%;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  resize: vertical;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.25);
+  border: 1px solid #FFFBFB;
+}
+.save-btn {
+  background-color: #AA2F2F;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+}
