@@ -11,17 +11,19 @@
   <body>
     <main>
     <div class="header">
-        <p class="fade-in">Marketing > <span>List Prosthetic</span></div></p>
+      <p>
+      <span >Marketing > </span>
+        List Prosthetic</p>
     </div>
 
     <div class="patient-details">
         <div class="patient-details-sec">
         <div id="info-label">
           <p>Patient Name</p>
-          <p>Occupation</p>
-          <p>Marital Status</p>
-          <p>Cause of Condition</p>
-          <p>Occupation</p>
+          <p>Gender</p>
+          <p>Patient Condition</p>
+          <p>Side Of Amputation</p>
+          <p>Type Of Amputation</p>
       </div>
       <div id="info-value" >
         <p>Isaac Odinaka Franklin-34 Years</p>
@@ -53,8 +55,9 @@
             <div id="info-label">
               <p>Marital Status</p>
               <div class="marital-status">
-                <button class="btn btn-red">ViewImage</button>
-                <button class="btn btn-red">ViewVideo</button></div>
+                <button class="btn btn-red">View Image</button>
+                <button class="btn btn-red">View Video</button>
+              </div>
               
              
           </div>
@@ -72,10 +75,15 @@
     </div>
 
     <div class="amputation-section">
-      <div class="section-title">Amputation Side</div>
+     
+      <div class="section-title">
+        <label>Amputation Side</label>
+        <div class="section-title-div"><input id="section-title-input"></div>
+      </div>
+
       <div class="checkbox-group">
         <div class="checkbox-item">
-          <input type="checkbox" id="leftSide1" />
+          <input type="checkbox" id="leftSide1" class="checkbox"/>
           <label for="leftSide1">Left</label>
         </div>
         <div class="checkbox-item">
@@ -88,9 +96,12 @@
         </div>
       </div>
     </div>
-
+    
     <div class="amputation-section">
-      <div class="section-title">Amputation Lenght</div>
+      <div class="section-title">
+        <label>Amputation Length</label>
+        <div class="section-title-div"><input id="section-title-input"></div>
+      </div>
       <div class="checkbox-group">
         <div class="checkbox-item">
           <input type="checkbox" id="long" />
@@ -112,7 +123,10 @@
     </div>
 
     <div class="amputation-section">
-      <div class="section-title">Amputation Level</div>
+      <div class="section-title">
+        <label>Amputation Level</label>
+        <div class="section-title-div"><input id="section-title-input"></div>
+      </div>
       <div class="checkbox-group">
         <div class="checkbox-item">
           <input type="checkbox" id="symes" />
@@ -149,8 +163,10 @@
       </div>
     </div>
 
-    <div class="section-title">For Fittings</div>
-
+    <div class="section-title">
+      <label>For Fittings</label>
+      <div class="section-title-div"><input id="section-title-input"></div>
+    </div>
     <div class="fitting-section">
       <div class="fitting-label">Stump</div>
       <div class="fitting-options">
@@ -239,6 +255,7 @@
       </div>
     </div>
 
+
     <div class="measurement-section">
       <div class="measurement-item">
         <div class="measurement-label">Stump Maturity</div>
@@ -296,16 +313,23 @@
   </main>
 
   <div class="subpage">
-  <div class="section-title">Observation</div>
+    <div class="section-title">
+      <label>Observation</label>
+      <div class="section-title-div"><input id="section-title-input" style="background-color: #f5f5f5;"></div>
+    </div>
 
+  <!--img div sec-->
     <div class="observation-section">
       <div class="observation-controls">
         <div class="select-container">
-          <div class="select-box" id="observationSelect">Select body</div>
-          <div class="select-dropdown" id="observationDropdown">
-            <div class="select-option" data-value="option1">Above Knee</div>
-            <div class="select-option" data-value="option2">Below Knee</div>
-          </div>
+          <label for="observationSelect"></label>
+          <select id="observationSelect">
+            <option value="" disabled selected>Select body</option>
+            <option value="option1">Above Knee</option>
+            <option value="option2">Below Knee</option>
+            <option value="option3">Sound Limb</option>
+            <option value="option4">Upper Extremity</option>
+          </select>
         </div>
         <button class="btn-add">Add</button>
       </div>
@@ -314,13 +338,16 @@
         <div class="observation-images" id="observationImagesContainer">
 
           <div class="observation-image" id="option1Image">
-            <p>Above Knee</p>
+            <div class="image-header">
+              <p>Above Knee</p>
+          <span class="close-icon">&times;</span>
+            </div>
             <div class="measurement-grid">
               <div class="measurement-diagram">
                 <img
                   src="assets/above_knee.png"
                   alt="Above knee diagram"
-                  class="knee-img"
+                  class="body-img"
                 />
               </div>
 
@@ -364,33 +391,36 @@
           </div>
 
           <div class="observation-image" id="option2Image">
-            <p>Below Knee</p>
+            <div class="image-header">
+              <p>Below Knee</p>
+          <span class="close-icon">&times;</span>
+            </div>
             <div class="measurement-grid">
 
               <div class="below-knee-field">
-                <div class="measurement-field" style="margin-top: 10px;">
+                <div class="measurement-field" style="margin-bottom: -20px;">
+                  <input type="text" style="visibility: hidden;" />
+                </div>
+                <div class="measurement-field">
                   <input type="text" />
+                </div>
+                <div class="measurement-field" >
+                  <input type="text" style="margin-top: 10px;"/>
                 </div>
                 <div class="measurement-field">
                   <input type="text" />
                 </div>
                 <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field" style="margin-top: -18px;">
                   <input type="text" />
                 </div>
                 <div class="measurement-field">
                   <input type="text" />
                 </div>
-                <div class="measurement-field">
-                  <input type="text" />
-                </div>
-                <div class="measurement-field">
-                  <input type="text" />
-                </div>
-                <div class="measurement-field">
-                  <input type="text" />
-                </div>
-                <div class="measurement-field" style="margin-top: 10px;">
-                  <input type="text" />
+                <div class="measurement-field" style="margin-top: -16px;">
+                  <input type="text" style="visibility: hidden;"/>
                 </div>
                 <div class="measurement-field">
                   <input type="text" />
@@ -398,13 +428,219 @@
                 <div class="measurement-field" style="margin-top: 5px;">
                   <input type="text" />
                 </div>
+                <div class="measurement-field"
+                style="margin-top: -10px;">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
                 <div class="measurement-field">
+                  <input type="text" />
+                </div>
+                <div class="measurement-field" >
+                  <input type="text" />
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field"
+                style="margin-top: -20px;">
+                  <input type="text" />
+                </div>
+                <div class="measurement-field" style="margin-top: px;">
                   <input type="text" />
                 </div>
               </div>
 
               <div class="measurement-diagram">
-                <img src="assets/below_knee.png" alt="Below knee diagram" class="knee-img" />
+                <img src="assets/below_knee.png" alt="Below knee diagram" class="body-img" />
+              </div>
+
+              <div class="below-knee-field">
+                <div class="measurement-field" style="margin-bottom: -20px;">
+                  <input type="text" style="visibility: hidden;" />
+                </div>
+                <div class="measurement-field">
+                  <input type="text" />
+                </div>
+                <div class="measurement-field" >
+                  <input type="text" style="margin-top: 10px;"/>
+                </div>
+                <div class="measurement-field">
+                  <input type="text" />
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field" style="margin-top: -18px;">
+                  <input type="text" />
+                </div>
+                <div class="measurement-field">
+                  <input type="text" />
+                </div>
+                <div class="measurement-field" style="margin-top: -16px;">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field">
+                  <input type="text" />
+                </div>
+                <div class="measurement-field" style="margin-top: 5px;">
+                  <input type="text" />
+                </div>
+                <div class="measurement-field"
+                style="margin-top: -10px;">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field">
+                  <input type="text" />
+                </div>
+                <div class="measurement-field" >
+                  <input type="text" />
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field"
+                style="margin-top: -20px;">
+                  <input type="text" />
+                </div>
+                <div class="measurement-field" style="margin-top: px;">
+                  <input type="text" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="observation-image" id="option3Image">
+            <div class="image-header">
+              <p>Sound Limb</p>
+          <span class="close-icon">&times;</span>
+            </div>
+            <div class="measurement-grid">
+
+              <div class="below-knee-field">
+                <div class="measurement-field" style="margin-top: 10px;">
+                  <input type="text" />
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field" style="margin-top: 10px;">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field" >
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="margin-top: 10px;"/>
+                </div>
+              </div>
+
+              <div class="measurement-diagram">
+                <img src="assets/sound limb.png" alt="sound limb diagram" class="body-img" />
+              </div>
+
+              <div class="below-knee-field">
+                <div class="measurement-field" style="margin-top: -5px">
+                  <input type="text" />
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field"
+                style="margin-top: -15px"
+                >
+                  <input type="text" />
+                </div>
+                <div class="measurement-field"
+                style="margin-top: -15px"
+                >
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field">
+                  <input type="text" />
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field" style="margin-top: 10px;">
+                  <input type="text" />
+                </div>
+                <div class="measurement-field" style="margin-top: 20px;">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="observation-image" id="option4Image">
+            <div class="image-header">
+              <p>Upper Extremity</p>
+          <span class="close-icon">&times;</span>
+            </div>
+            <div class="measurement-grid">
+
+              <div class="below-knee-field">
+                <div class="measurement-field" style="margin-top: 10px;">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field">
+                  <input type="text" />
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field" style="margin-top: 10px;">
+                  <input type="text" />
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field" style="margin-top: 5px;">
+                  <input type="text" />
+                </div>
+               
+              </div>
+
+              <div class="measurement-diagram">
+                <img src="assets/upper extrimity sketch.png" alt="upper extrimity sketch diagram" class="body-img" />
               </div>
 
               <div class="below-knee-field" style="margin-top: 10px;">
@@ -412,7 +648,31 @@
                   <input type="text" />
                 </div>
                 <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field">
                   <input type="text" />
+                </div>
+                <div class="measurement-field">
+                  <input type="text" />
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field">
+                  <input type="text" />
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field">
+                  <input type="text" />
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
+                </div>
+                <div class="measurement-field">
+                  <input type="text" style="visibility: hidden;"/>
                 </div>
                 <div class="measurement-field">
                   <input type="text" />
@@ -422,21 +682,6 @@
                 </div>
                 <div class="measurement-field">
                   <input type="text" />
-                </div>
-                <div class="measurement-field">
-                  <input type="text" />
-                </div>
-                <div class="measurement-field">
-                  <input type="text" />
-                </div>
-                <div class="measurement-field">
-                  <input type="text" />
-                </div>
-                <div class="measurement-field">
-                  <input type="text" />
-                </div>
-                <div class="measurement-field">
-                  <input type="text" style="margin-top: 5px;"/>
                 </div>
                 <div class="measurement-field">
                   <input type="text" />
@@ -447,12 +692,12 @@
         </div>
       </div>
     </div>
-
+<!---->
+    
     <div class="observation-section">
       <div class="measurement-label">Observation</div>
       <input placeholder="enter muscle strength" class="observation-inp"></input >
     </div>
-
     <div class="observation-section">
       <div class="measurement-label">Recommendations</div>
       <input placeholder="enter muscle strength" class="observation-inp"></input >
