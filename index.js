@@ -4,13 +4,14 @@ document.addEventListener("DOMContentLoaded", function() {
     
     const selectedOptions = new Set();
     
-
     addButton.addEventListener("click", function() {
       const selectedValue = selectElement.value;
       if (selectedValue) {
         const targetImage = document.getElementById(selectedValue + "Image");
         if (targetImage) {
           selectedOptions.add(selectedValue);
+          
+          // Show all selected images
           document.querySelectorAll(".observation-image").forEach(img => {
             const imageId = img.id;
             const optionValue = imageId.replace("Image", "");
@@ -21,6 +22,9 @@ document.addEventListener("DOMContentLoaded", function() {
               img.style.display = "none";
             }
           });
+          
+          // Reset dropdown
+          selectElement.selectedIndex = 0;
         }
       }
     });
