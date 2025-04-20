@@ -203,10 +203,6 @@ letter-spacing: 0%;
   height: 0;
   position: absolute;
 }
-
-
-
-
 .checkbox-item label::before {
   content: "";
   position: absolute;
@@ -338,11 +334,13 @@ input[type="text"] {
   color: #888;
   background-color: #fff;
 }
+
 .select-container {
   position: relative;
   width: 150px;
   margin-right: 2px;
 }
+
 .select-box {
   width: 100%;
   padding: 5px;
@@ -351,6 +349,7 @@ input[type="text"] {
   cursor: pointer;
   background-color: #fff;
 }
+
 .select-dropdown {
   position: absolute;
   top: 100%;
@@ -362,17 +361,21 @@ input[type="text"] {
   z-index: 10;
   display: none;
 }
+
 .select-option {
   padding: 5px;
   cursor: pointer;
 }
+
 .select-option:hover {
   background-color: #f0f0f0;
 }
+
 .observation-controls {
   display: flex;
   margin-bottom: 15px;
 }
+
 .btn-add {
   background-color: #9C3030;
   color: white;
@@ -384,17 +387,19 @@ input[type="text"] {
   cursor: pointer;
   border-radius: 5px;
 }
+
 .observation-images-container {
   overflow-x: auto;
-  overflow-x: auto; 
   padding-bottom: 15px; 
 }
+
 .observation-images {
-  display: flex;
-  flex-wrap: nowrap; 
+  display: grid;
+  grid-template-columns: repeat(2, auto);
   gap: 30px;
   min-width: min-content;
 }
+
 .observation-image {
   background-color: #ffffffd4;
   border-radius: 2px;
@@ -402,10 +407,13 @@ input[type="text"] {
   margin-bottom: 15px;
   display: none;
   flex-shrink: 0;
+  width: fit-content;
 }
+
 .observation-image.active {
   display: block;
 }
+
 .image-header {
   display: flex;
   justify-content: space-between;
@@ -419,6 +427,7 @@ input[type="text"] {
   font-size: 18px;
   font-weight: bold;
 }
+
 .close-icon {
   margin: 10px;
   cursor: pointer;
@@ -426,11 +435,21 @@ input[type="text"] {
   color: #AA2F2F;
   font-weight: bold;
 }
-:hover {
+
+.close-icon:hover {
   color: #8a2424;
 }
-.body-img{
-  height:450px ;
+
+.body-img {
+  height: 450px;
+}
+
+/* horizontal scrolling */
+@media (max-width: 1200px) {
+  .observation-images {
+    grid-template-columns: repeat(2, auto);
+    overflow-x: auto;
+  }
 }
 .measurement-grid {
   display: flex;
